@@ -2,49 +2,6 @@ var fs = require('fs');
 var path = require('path');
 var url = require('url');
 
-
-
-function reqResponse(res, data, contentType, statusCode) {
-
-};
-
-function requestPartialHTML(req, res){
-
-};
-
-function requestHTML(req, res) {
-
-};
-
-function requestCSS(req, res) {
-
-};
-
-function requestJS(req, res) {
-
-};
-
-
-function requestHandler(req, res){
-	var reqURL = url.parse(req.url).pathname;
-	if(reqURL === '/'){
-		requestHTML(req, res);
-	} else if(req.url.slice(-2) === 'js'){
-		requestJS(req, res);
-	} else if(req.url.slice(-3) === 'css'){
-		requestCSS(req, res);
-	} else if(req.url.slice(-4) === 'html'){
-		requestPartialHTML(req, res);
-	} else {
-		res.statusCode = 404;
-		res.end();
-	}
-	
-};
-
-
-
-
 function getFileExtension(route) {
     var arr = route.split('.');
     if(arr.length<=1) {
@@ -110,6 +67,6 @@ function readFile(filePath, header, res) {
 
 
 module.exports = {
-    requestHandler: requestHandler,
+
 	handleRequests: handleRequests
 };

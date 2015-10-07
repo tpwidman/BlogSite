@@ -1,0 +1,13 @@
+<div class="container main">
+	<div class="row">
+		<div class="text-center">
+		<button class="btn btn-primary newPost" ng-click="newPost('newpost')">New Post</button>
+		</div>
+		<div class = 'posts col-md-8 col-md-offset-2' ng-repeat = "post in posts">
+			<h4>Author : {{post.author}}</h4>
+			<h4>Title : {{post.title}}</h4>
+			<p>{{post.content}}<span class = 'edit' ng-click = "viewPost('post/')">...</span></p>
+			
+		</div>
+	</div>
+</div>

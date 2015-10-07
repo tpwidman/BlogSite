@@ -1,0 +1,16 @@
+<div class="container main">
+	<div class="row">
+		<div class="postForm col-md-8 col-md-offset-2">
+			<div class="user">
+				Author: <input type= "text" ng-model="author">
+			</div>
+			<div class="user">
+				Title: <input type= "text" ng-model="title">
+			</div>
+			<div class="form-group">
+			<textarea class="form-control status-box" rows="2" placeholder="What's on your mind?" ng-model="content"></textarea>
+			</div>
+			<button class="btn btn-primary" ng-click="post('/')">Post</button>
+			</div>
+	</div>
+</div>

@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "main": "server/server.js",
   "scripts": {
+    "build": "browserify main.js -o bundle.js",
+    "watch": "watchify main.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Platypi",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^11.2.0"
   }
 }
